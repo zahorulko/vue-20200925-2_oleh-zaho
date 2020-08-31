@@ -1,0 +1,79 @@
+{
+  "name": "tasks-vue",
+  "version": "1.0.0",
+  "description": "tasks-vue",
+  "main": "index.js",
+  "scripts": {
+    "serve": "serve",
+    "vue-serve": "vue-cli-service serve",
+    "test": "jest --",
+    "lint": "eslint \"*.js\" --fix",
+    "format": "prettier --write \"*.js\"",
+    "test:solution": "cross-env SOLUTION=1 npm test"
+  },
+  "author": "Grigorii K. Shartsev <me@shgk.me>",
+  "license": "UNLICENSED",
+  "dependencies": {
+    "@babel/core": "^7.10.2",
+    "@babel/preset-env": "^7.10.2",
+    "@vue/cli-plugin-unit-jest": "^4.4.4",
+    "@vue/test-utils": "^1.0.3",
+    "jest": "^26.0.1",
+    "vue": "^2.6.11",
+    "vue-jest": "^3.0.5",
+    "vue-router": "^3.3.4",
+    "vue-template-compiler": "^2.6.11"
+  },
+  "devDependencies": {
+    "@types/jest": "^25.2.3",
+    "@vue/cli-service": "^4.4.4",
+    "@vue/eslint-config-prettier": "^6.0.0",
+    "babel-eslint": "^10.1.0",
+    "cross-env": "^7.0.2",
+    "eslint": "^7.2.0",
+    "eslint-plugin-prettier": "^3.1.3",
+    "eslint-plugin-vue": "^6.2.2",
+    "prettier": "^2.0.5",
+    "serve": "^11.3.2"
+  },
+  "babel": {
+    "presets": [
+      [
+        "@babel/preset-env",
+        {
+          "targets": {
+            "node": "current"
+          }
+        }
+      ]
+    ]
+  },
+  "eslintConfig": {
+    "root": true,
+    "env": {
+      "browser": true,
+      "node": true,
+      "es2020": true,
+      "jest": true
+    },
+    "extends": [
+      "plugin:vue/essential",
+      "eslint:recommended",
+      "@vue/prettier"
+    ],
+    "ignorePatterns": [
+      "vendor/**/*"
+    ],
+    "parserOptions": {
+      "parser": "babel-eslint"
+    }
+  },
+  "prettier": {
+    "tabWidth": 2,
+    "useTabs": false,
+    "singleQuote": true,
+    "trailingComma": "all",
+    "arrowParens": "always",
+    "endOfLine": "lf"
+  }
+}
